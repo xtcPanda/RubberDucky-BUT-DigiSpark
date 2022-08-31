@@ -172,5 +172,5 @@ of course anyone and everyone I looked up his work or read about something he wr
 - [Mohamed Mesbah](https://twitter.com/momesbah1)
 - [Omar Emad](https://www.linkedin.com/in/omar-emad-807506243/)
 - Ahmed Mohamed
-- Ahmed Hossam
+- [Ahmed Hossam](https://www.linkedin.com/in/ahmed-hossam-b1754a201/)
 - Shehab Mohamed
