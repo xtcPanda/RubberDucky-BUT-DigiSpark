@@ -56,10 +56,10 @@ after you write your script in Arduino you will need to upload it to the Digispa
 now we plug in our device and it will automatically detect it and upload the script to it outputting something like this:
 
 `> Device is found!`
-`connecting: 16% complete
-connecting: 22% complete
-connecting: 28% complete
-connecting: 33% complete`
+`connecting: 16% complete`
+`connecting: 22% complete`
+`connecting: 28% complete`
+`connecting: 33% complete`
 `> Device has firmware version 1.6`
 `> Available space for user applications: 6012 bytes`
 `> Suggested sleep time between sending pages: 8ms`
