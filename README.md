@@ -6,7 +6,7 @@ this is a project for a summer training course at my university in Network penet
 
 we started by downloading the Arduino software:
 
-([images\Screenshot of the downloading page in the arduino website.png](https://github.com/xtcPanda/RubberDucky-BUT-DigiSpark/blob/main/images/Screenshot%20of%20the%20downloading%20page%20in%20the%20arduino%20website.png))
+![Screenshot of the downloading page in the arduino website.png](https://github.com/xtcPanda/RubberDucky-BUT-DigiSpark/blob/main/images/Screenshot%20of%20the%20downloading%20page%20in%20the%20arduino%20website.png)
 
 using version 1.8.19 Arduino IDE
 
