@@ -1,0 +1,21 @@
+//This DigiSpark script opens up Mounir's song Ana ray2 and also a GIF and then maximizes it using F11
+#include "DigiKeyboard.h"
+void setup() {
+  //empty
+}
+void loop() {
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.print("https://youtu.be/NNIxPZZmrSk?t=46"); //starting a song for mohammed mounir "ana ray2"
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(3000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.print("https://giphy.com/gifs/work-club-hit-9uXPLZpTgSHcY/fullscreen"); //starts a gif of 2 kids dancing looking drunk
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_F11); //putting the browser window in full screen mode
+  for(;;){ /*empty*/ }
+}
