@@ -6,11 +6,11 @@ this is a project for a summer training course at my university in Network penet
 
 we started by downloading the Arduino software:
 
-![Screenshot of the downloading page in the arduino website](images\Screenshot of the downloading page in the arduino website.png)
+([images\Screenshot of the downloading page in the arduino website.png](https://github.com/xtcPanda/RubberDucky-BUT-DigiSpark/blob/main/images/Screenshot%20of%20the%20downloading%20page%20in%20the%20arduino%20website.png))
 
 using version 1.8.19 Arduino IDE
 
-![Screenshot from inside the Arduino software v1-8-19](images\Screenshot from inside the Arduino software v1-8-19.png)
+([images\Screenshot from inside the Arduino software v1-8-19.png](https://github.com/xtcPanda/RubberDucky-BUT-DigiSpark/blob/main/images/Screenshot%20from%20inside%20the%20Arduino%20software%20v1-8-19.png))
 
 Setting up our IDE
 
