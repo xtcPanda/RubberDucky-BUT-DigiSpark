@@ -6,11 +6,11 @@ this is a project for a summer training course at my university in Network penet
 
 we started by downloading the Arduino software:
 
-![Screenshot of the downloading page in the arduino website.png](https://github.com/xtcPanda/RubberDucky-BUT-DigiSpark/blob/main/images/Screenshot%20of%20the%20downloading%20page%20in%20the%20arduino%20website.png)
+![Screenshot of the downloading page in the arduino website](images\Screenshot of the downloading page in the arduino website.png)
 
 using version 1.8.19 Arduino IDE
 
-([images\Screenshot from inside the Arduino software v1-8-19.png](https://github.com/xtcPanda/RubberDucky-BUT-DigiSpark/blob/main/images/Screenshot%20from%20inside%20the%20Arduino%20software%20v1-8-19.png))
+![Screenshot from inside the Arduino software v1-8-19](images\Screenshot from inside the Arduino software v1-8-19.png)
 
 Setting up our IDE
 
@@ -76,9 +76,9 @@ now we plug in our device and it will automatically detect it and upload the scr
 
 `> Whole page count: 94  page size: 64`
 
-`> Erase function sleep duration: 752ms`
+`> Erase function sleep duration: 752`
 
-`parsing: 50% complete`
+`msparsing: 50% complete`
 
 `> Erasing the memory ...`
 
@@ -96,9 +96,7 @@ now we plug in our device and it will automatically detect it and upload the scr
 
 `writing: 80% complete`
 
-`> Starting the user app ...`
-
-`running: 100% complete`
+`> Starting the user app ...running: 100% complete`
 
 `Micronucleus done. Thank you!`
 
@@ -116,11 +114,29 @@ then tried some other payloads found on github
 
 using VirtualBox to test our attacks on other machines:
 
+started by installing win 10 to a VM on VirtualBox since I had an old iso
+
+![Screenshot from installing windows 10](images\Screenshot from installing windows 10.png)
+
+then added a virtual box for win8.1 that I downloaded from Microsoft Edge Developer (you can find any link needed in the resources section)
+
+![Screenshot of installing win 8.1](images\Screenshot of installing win 8.1.png)
+
+We then tested these payloads on win11 (our host) and the 2 VMs we installed as mentioned earlier. (we only tested on windows environments cause we are targeting Devices using windows OS and nothing else at the moment with this project)
 
 
-and after making sure everything works exactly like intended we started coding our own payloads or editing existing ones so we don't reinvent the wheel.
 
-### Resources:
+and after making sure everything works exactly as intended we started coding our own payloads or editing existing ones so we don't reinvent the wheel.
+
+### Our Payloads
+
+
+
+**P.S.** we can add more than one payload to our digispark by just chaining them to each other in the arduino script
+
+
+
+## Resources:
 - https://www.amazon.eg/-/en/gp/product/B0969HJTP4/ref=ox_sc_act_title_1?smid=A13V3DUXORRC33&psc=1 (the device we used)
 - https://www.arduino.cc/en/software (we chose the win app version)
 - https://github.com/digistump/DigistumpArduino/releases
@@ -134,4 +150,27 @@ and after making sure everything works exactly like intended we started coding o
 - [Downloads – Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - [How to enable USB in VirtualBox | TechRepublic](https://www.techrepublic.com/article/how-to-enable-usb-in-virtualbox/)
 - [Virtual Machines - Microsoft Edge Developer](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
+- [Pay me some attention (ducktoolkit.com)](https://ducktoolkit.com/)
 - 
+
+
+
+## Credits:
+
+- [theCyberGuy](https://www.linkedin.com/in/momen-eldawakhly-3b6250204/) (Our 1st Instructor for that course)
+- [M0h4m3d G4l4l](https://www.linkedin.com/in/m0h4m3d-g4l4l/) (Our 2nd Instructor for that course)
+- [Null Byte - YouTube](https://www.youtube.com/channel/UCgTNupxATBfWmfehv21ym-g)
+- [Mohammed Fathy - YouTube](https://www.youtube.com/c/MohammedFathy)
+
+of course anyone and everyone I looked up his work or read about something he wrote or helped in anyway is appreciated.
+
+
+
+## Team Members:
+
+- [Moaaz (xtcPanda) Akram](https://www.linkedin.com/in/moaaz-akram/) (Team Leader) (ME!)
+- [Mohamed Mesbah](https://twitter.com/momesbah1)
+- [Omar Emad](https://www.linkedin.com/in/omar-emad-807506243/)
+- Ahmed Mohamed
+- Ahmed Hossam
+- Shehab Mohamed
