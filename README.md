@@ -90,7 +90,7 @@ and that payload makes the device turn on another led we found in it and makes i
 
 then tried some other payloads found on github
 
-using VMware workstation 16 player to test our attacks on other machines:
+using VirtualBox to test our attacks on other machines:
 
 
 
@@ -107,3 +107,7 @@ and after making sure everything works exactly like intended we started coding o
 - USB Rubber Ducky Documentation by hak5darren: https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Duckyscript
 - Digistump DigiSpark Documentation: https://github.com/digistump/DigisparkArduinoIntegration/blob/master/libraries/DigisparkKeyboard/DigiKeyboard.h
 - [CedArctic/digiQuack: DuckyScript language to DigiSpark payload converter (Online / C++) (github.com)](https://github.com/CedArctic/digiQuack)
+- [Downloads – Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- [How to enable USB in VirtualBox | TechRepublic](https://www.techrepublic.com/article/how-to-enable-usb-in-virtualbox/)
+- [Virtual Machines - Microsoft Edge Developer](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
+- 

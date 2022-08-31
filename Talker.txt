@@ -21,7 +21,7 @@ void loop() {
   //DigiKeyboard.print("$speak.SelectVoice('Microsoft Zira Desktop')");
   //DigiKeyboard.sendKeyStroke(KEY_ENTER);
   //DigiKeyboard.delay(500);
-  DigiKeyboard.print("$speak.Speak(\"Here's a joke. Why do Java programmers wear glasses? Because they can't C#.\")");
+  DigiKeyboard.print("$speak.Speak(\"Hi there, I know you think something is wrong with the universe since I am talking but do not worry I just got bored of how many mistakes you make.\")");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(100);
   DigiKeyboard.print("exit");
