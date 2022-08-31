@@ -6,11 +6,11 @@ this is a project for a summer training course at my university in Network penet
 
 we started by downloading the Arduino software:
 
-![Screenshot of the downloading page in the arduino website](images\Screenshot of the downloading page in the arduino website.png)
+![Screenshot of the downloading page in the arduino website.png](https://github.com/xtcPanda/RubberDucky-BUT-DigiSpark/blob/main/images/Screenshot%20of%20the%20downloading%20page%20in%20the%20arduino%20website.png)
 
 using version 1.8.19 Arduino IDE
 
-![Screenshot from inside the Arduino software v1-8-19](images\Screenshot from inside the Arduino software v1-8-19.png)
+([images\Screenshot from inside the Arduino software v1-8-19.png](https://github.com/xtcPanda/RubberDucky-BUT-DigiSpark/blob/main/images/Screenshot%20from%20inside%20the%20Arduino%20software%20v1-8-19.png))
 
 Setting up our IDE
 
@@ -49,33 +49,57 @@ Setting up our IDE
 after you write your script in Arduino you will need to upload it to the Digispark but you won't be able to see the digispark as a usb drive the Arduino console will output this message instead:
 
 `Running Digispark Uploader...`
+
 `Plug in device now... (will timeout in 60 seconds)`
+
 `> Please plug in the device ...`
+
 `> Press CTRL+C to terminate the program.`
 
 now we plug in our device and it will automatically detect it and upload the script to it outputting something like this:
 
 `> Device is found!`
-`connecting: 16% complete
-connecting: 22% complete
-connecting: 28% complete
-connecting: 33% complete`
+
+`connecting: 16% complete`
+
+`connecting: 22% complete`
+
+`connecting: 28% complete`
+
+`connecting: 33% complete`
+
 `> Device has firmware version 1.6`
+
 `> Available space for user applications: 6012 bytes`
+
 `> Suggested sleep time between sending pages: 8ms`
+
 `> Whole page count: 94  page size: 64`
+
 `> Erase function sleep duration: 752ms`
+
 `parsing: 50% complete`
+
 `> Erasing the memory ...`
+
 `erasing: 55% complete`
+
 `erasing: 60% complete`
+
 `erasing: 65% complete`
+
 `> Starting to upload ...`
+
 `writing: 70% complete`
+
 `writing: 75% complete`
+
 `writing: 80% complete`
+
 `> Starting the user app ...`
+
 `running: 100% complete`
+
 `Micronucleus done. Thank you!`
 
 that means your script/payload was uploaded successfully
