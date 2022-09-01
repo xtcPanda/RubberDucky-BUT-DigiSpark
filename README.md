@@ -46,6 +46,8 @@ Setting up our IDE
 
 **P.S.** When you plug in the Device there will be a delay for 5 sec. that is because it is checking if you are trying to reprogram it or run it (bootloader) 
 
+![run-usb-rubber-ducky-scripts-super-inexpensive-digispark-board.w1456](D:\FUE\Summer Training\Project\RubberDucky-BUT-DigiSpark\images\run-usb-rubber-ducky-scripts-super-inexpensive-digispark-board.w1456.jpg)
+
 after you write your script in Arduino you will need to upload it to the Digispark but you won't be able to see the digispark as a usb drive the Arduino console will output this message instead:
 
 `Running Digispark Uploader...`
@@ -122,13 +124,53 @@ then added a virtual box for win8.1 that I downloaded from Microsoft Edge Develo
 
 ![Screenshot of installing win 8.1](images\Screenshot of installing win 8.1.png)
 
-We then tested these payloads on win11 (our host) and the 2 VMs we installed as mentioned earlier. (we only tested on windows environments cause we are targeting Devices using windows OS and nothing else at the moment with this project)
+We then tested these payloads on win11 (our host) and the 2 VMs we installed as mentioned earlier(we faced a lot of issues with win8.1 or that specific virtual machine so we sticked to 11 and 10 in testing). (we only tested on windows environments cause we are targeting Devices using windows OS and nothing else at the moment with this project)
 
+when plugging in the DigiSpark it should start an attack on the machine .. from opening up a cmd giving itself access all the way to playing a song
 
+![Screenshot testing talker payload in win 10](D:\FUE\Summer Training\Project\RubberDucky-BUT-DigiSpark\images\Screenshot testing talker payload in win 10.png)
 
 and after making sure everything works exactly as intended we started coding our own payloads or editing existing ones so we don't reinvent the wheel.
 
 ### Our Payloads
+
+#### 1: Remote_BackDoor.ino:<br>
+Creates account with admin privileges with name blanka and passwd Ping@123. Also hides it from login 
+screen and turn on remote desktop to be accessible from remote location.<br>
+
+**Tested on:**<br>
+**OS**: Windows 10<br>
+**User**: Admin User<br>
+**Hardware**: ATtiny85 (Chinese)
+
+#### 2: GoodOl' BackDoor.ino:<br>
+Based on old sticky key backdoor trick by adding a registry key instead of replacing the file in system32 directory. After successful run press shift 5 times on login screen and command prompt will popup with admin privileges.<br>
+
+To remove the backdoor run the following command in command prompt with admin privileges and backdoor will be removed.
+
+***REG DELETE "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe***
+
+**Tested on:**<br>
+**OS**: Windows 10/7<br>
+**User**: Admin User<br>
+**Hardware**: ATtiny85 (Chinese)
+
+#### 3: Create_Account:
+This script does the following:
+Starts Command prompt as Administrator
+Runs sequence of powershell commands
+Stores password in a variable
+Creates new local user account
+Gives newly created account administrator priviliages
+Exits Command prompt
+Additional information:
+Running time is around 15 seconds(depending on hw and length of user name, password, description...)
+Optionally you can add -FullName and -Description parameters to give account more believable look: New-LocalUser \"accName\" -Password $pass -FullName \"User name\" -Description \"Description of new account\"
+Credits
+https://github.com/Michyus
+
+#### 4: Talker:
+This DigiSpark script opens up the powershell and makes your computer speak out a message.
 
 
 
@@ -151,7 +193,7 @@ and after making sure everything works exactly as intended we started coding our
 - [How to enable USB in VirtualBox | TechRepublic](https://www.techrepublic.com/article/how-to-enable-usb-in-virtualbox/)
 - [Virtual Machines - Microsoft Edge Developer](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
 - [Pay me some attention (ducktoolkit.com)](https://ducktoolkit.com/)
-- 
+- [A Complete Beginner Friendly Guide To The Digispark BadUSB - Hardware - 0x00sec - The Home of the Hacker](https://0x00sec.org/t/a-complete-beginner-friendly-guide-to-the-digispark-badusb/8002)
 
 
 
